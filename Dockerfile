@@ -1,11 +1,9 @@
 # Set the base image to use for subsequent instructions
-FROM alpine:3.18
-
-# Set the working directory inside the container
-WORKDIR /usr/src
+FROM debian:12.2
 
 # Copy any source file(s) required for the action
-COPY entrypoint.sh .
+COPY LICENSE README.md
+COPY entrypoint.sh /entrypoint.sh
 
 # Configure the container to be run as an executable
-ENTRYPOINT ["/usr/src/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
