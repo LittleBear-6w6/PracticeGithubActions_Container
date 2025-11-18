@@ -1,5 +1,5 @@
 # Set the base image to use for subsequent instructions
-FROM debian:13.1
+FROM debian:13.2
 
 # Copy any source file(s) required for the action
 COPY LICENSE README.md
